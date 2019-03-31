@@ -1,8 +1,6 @@
 class EmployeesController < ApplicationController
   before_action :set_employee, only: [:show, :edit, :update, :destroy]
-  before_action :logged_in_employee
-  before_action :correct_employee, only: [:show, :edit, :update, :destroy]
-  
+
   # GET /employees
   # GET /employees.json
   def index
@@ -58,7 +56,7 @@ class EmployeesController < ApplicationController
   def destroy
     @employee.destroy
     respond_to do |format|
-      format.html { redirect_to employees_url, notice: 'employee was successfully destroyed.' }
+      format.html { redirect_to employees_url, notice: 'Employee was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -71,17 +69,6 @@ class EmployeesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def employee_params
-      params.require(:employee).permit(:phone, :password)
-    end
-    
-    def logged_in_employee
-      unless logged_in?
-        flash[:danger] = "Please log in."
-        redirect_to login_url
-      end
-    end
-    
-    def correct_employee
-      redirect_to(root_url) unless @employee == current_employee
+      params.fetch(:employee, {})
     end
 end
