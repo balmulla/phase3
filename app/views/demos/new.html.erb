@@ -1,6 +1,4 @@
-<div >
-    <h2 STYLE="position:absolute; TOP:135px; LEFT:170px;>
-        <%= form_for(:demo, url: demos_path) do |f| %>
+        <%= form_for(:demo, url: demos_path, :html => {:style =>"position:absolute; TOP:135px; LEFT:170px;font-size:160%;"}) do |f| %>
             <%= f.label :phone %>
             &nbsp &nbsp &nbsp
             <%= f.phone_field :phone %>
@@ -10,7 +8,5 @@
             <%= f.password_field :password %>
             </br></br>
     
-            <%= f.submit "Login" %>
+            <%= f.submit "Login" , :class => 'btn btn-secondary', :style => "position:absolute; LEFT:210px;font-size:100%;"%>
         <% end %>
-    </h2>
-</div>
