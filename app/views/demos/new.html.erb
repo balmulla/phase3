@@ -1,9 +1,16 @@
-<%= form_for(:demo, url: demos_path) do |f| %>
-    <%= f.label :phone %>
-    <%= f.phone_field :phone %>
+<div >
+    <h2 STYLE="position:absolute; TOP:135px; LEFT:170px;>
+        <%= form_for(:demo, url: demos_path) do |f| %>
+            <%= f.label :phone %>
+            &nbsp &nbsp &nbsp
+            <%= f.phone_field :phone %>
     
-    <%= f.label :password %>
-    <%= f.password_field :password %>
+            </br></br>
+            <%= f.label :password %>
+            <%= f.password_field :password %>
+            </br></br>
     
-    <%= f.submit "Login" %>
-<% end %>
+            <%= f.submit "Login" %>
+        <% end %>
+    </h2>
+</div>
