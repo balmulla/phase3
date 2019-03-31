@@ -8,6 +8,7 @@ class Employee < ApplicationRecord
   has_many :stores, through: :assignments
   
   # Validations
+  has_secure_password
   validates_presence_of :first_name, :last_name, :date_of_birth, :ssn, :role
   validates_date :date_of_birth, on_or_before: lambda { 14.years.ago }, on_or_before_message: "must be at least 14 years old"
   validates_format_of :phone, with: /\A\(?\d{3}\)?[-. ]?\d{3}[-.]?\d{4}\z/, message: "should be 10 digits (area code needed) and delimited with dashes only", allow_blank: true
