@@ -1,11 +1,11 @@
         <%= form_for(:demo, url: demos_path, :html => {:style =>"position:absolute; TOP:135px; LEFT:170px;font-size:160%;"}) do |f| %>
-            <%= f.label :phone %>
-            &nbsp &nbsp &nbsp
-            <%= f.phone_field :phone %>
+            <%= f.label :ssn, "SSN" %>
+            <%= f.text_field :ssn , :style => "position:absolute; LEFT:130px;"%>
     
             </br></br>
             <%= f.label :password %>
-            <%= f.password_field :password %>
+            &nbsp
+            <%= f.password_field :password, :style => "position:absolute; LEFT:130px;" %>
             </br></br>
     
             <%= f.submit "Login" , :class => 'btn btn-secondary', :style => "position:absolute; LEFT:210px;font-size:100%;"%>
