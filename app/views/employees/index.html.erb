@@ -2,6 +2,8 @@
 
 <h1>Employees</h1>
 
+<%= link_to 'New Employee', new_employee_path, :style => "position:absolute; TOP:23px; LEFT:700px; ", :class => "btn btn-info"%>
+
 <table class="table table-striped">
   <thead>
     <tr>
@@ -23,13 +25,13 @@
   <tbody>
     <% @employees.each do |employee| %>
       <tr>
-        <td><%= current_employee.first_name %></td>
-        <td><%= current_employee.last_name %></td>
-        <td><%= current_employee.ssn %></td>
-        <td><%= current_employee.date_of_birth %></td>
-        <td><%= current_employee.phone %></td>
-        <td><%= current_employee.role %></td>
-        <td><%= current_employee.active %></td>
+        <td><%= employee.first_name %></td>
+        <td><%= employee.last_name %></td>
+        <td><%= employee.ssn %></td>
+        <td><%= employee.date_of_birth %></td>
+        <td><%= employee.phone %></td>
+        <td><%= employee.role %></td>
+        <td><%= employee.active %></td>
         <td><%= link_to 'Show', employee %></td>
         <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
         <% if current_employee.role == "admin"%>
@@ -41,5 +43,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New Employee', new_employee_path %>
