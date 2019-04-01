@@ -1,4 +1,4 @@
-<% if @employee.role = "employee" %>
+<% if @employee.ssn == current_employee.ssn %>
   <h1> Welcome <%= @employee.first_name %> <%= @employee.last_name %>!</h1>
   <h2> Your profile</h2>
 <% end %>
