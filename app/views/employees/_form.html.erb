@@ -16,57 +16,58 @@
 <table class="table">
   <tr>
   <div class="field ">
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name, id: :employee_first_name, :style => "position:absolute; LEFT:160px;" %>
+    <%= form.label :first_name, :style => "position:relative;" %>
+    <%= form.text_field :first_name, id: :employee_first_name, :style => "position:relative;" %>
+    <!--LEFT:160px;-->
   </div>
   </tr>
   
   <tr>
   <div class="field">
-    <%= form.label :last_name %>
-    <%= form.text_field :last_name, id: :employee_last_name, :style => "position:absolute; LEFT:160px;" %>
+    <%= form.label :last_name, :style => "position:relative;"  %>
+    <%= form.text_field :last_name, id: :employee_last_name, :style => "position:relative; " %>
   </div>
   </tr>
   
   <tr>
   <div class="field">
-    <%= form.label :ssn %> 
-    <%= form.text_field :ssn, id: :employee_ssn, :style => "position:absolute; LEFT:160px;" %>
+    <%= form.label :ssn, :style => "position:relative;"  %> 
+    <%= form.text_field :ssn, id: :employee_ssn, :style => "position:relative; " %>
   </div>  
   </tr>
   
   <tr>
   <div class="field">
-    <%= form.label :date_of_birth %>
-    <%= form.date_field :date_of_birth, id: :employee_date_of_birth, :style => "position:absolute; LEFT:160px;"  %>
+    <%= form.label :date_of_birth, :style => "position:relative;"  %>
+    <%= form.date_field :date_of_birth, id: :employee_date_of_birth, :style => "position:relative; "  %>
   </div>
   </tr>
   
   <tr>
   <div class="field ">
-    <%= form.label :phone %> 
-    <%= form.text_field :phone, id: :employee_phone, :style => "position:absolute; LEFT:160px;" %>
+    <%= form.label :phone, :style => "position:relative;"  %> 
+    <%= form.text_field :phone, id: :employee_phone, :style => "position:relative; " %>
   </div>
   </tr>
     
   <tr>
   <div class="field ">
-    <%= form.label :role %>
-    <%= form.text_field :role, id: :employee_role, :style => "position:absolute; LEFT:160px;" %>
+    <%= form.label :role, :style => "position:relative;"  %>
+    <%= form.text_field :role, id: :employee_role, :style => "position:relative; " %>
   </div>
   </tr>
   
   <tr>
   <div class="field ">
-    <%= form.label :active %>
-    <%= form.text_field :active, id: :employee_active, :style => "position:absolute; LEFT:160px;" %>
+    <%= form.label :active, :style => "position:relative;"  %>
+    <%= form.text_field :active, id: :employee_active, :style => "position:relative; " %>
   </div>
   </tr>
   
   <tr>
   <div class="field">
-    <%= form.label :password %>
-    <%= form.password_field :password, id: :employee_password, :style => "position:absolute; LEFT:160px;" %>
+    <%= form.label :password, :style => "position:relative;"  %>
+    <%= form.password_field :password, id: :employee_password, :style => "position:relative;" %>
   </div>
   </tr>
 </table>
