@@ -1,3 +1,8 @@
+<% if @employee.role = "employee" %>
+  <h1> Welcome <%= @employee.first_name %> <%= @employee.last_name %>!</h1>
+  <h2> Your profile</h2>
+<% end %>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -32,8 +37,10 @@
 
 <p>
   <strong>Active:</strong>
-  <%= @employee.role %>
+  <%= @employee.active %>
 </p>
 
-<%= link_to 'Edit', edit_employee_path(@employee) %> |
-<%= link_to 'Back', employees_path %>
+<% if @employee.role != "employee" %>
+  <%= link_to 'Edit', edit_employee_path(@employee) %> |
+  <%= link_to 'Back', employees_path %>
+<% end %>
